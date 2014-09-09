@@ -64,7 +64,7 @@ def login(user_name,user_pwd):
 	conn.request("POST", umeng_api_url['login'], params, headers)
 
 	res = conn.getresponse()
-	print res.status, res.reason
+	print "\nlogin\t","POST\t",umeng_api_url['host']+umeng_api_url['login'],"\t"+params,"\n",res.status, res.reason
 
 	#如果数据返回出错，那么return 空
 	if res.status != 200:
@@ -98,7 +98,7 @@ def apps_count(auth_token):
 	conn.request("GET", url)
 
 	res = conn.getresponse()
-	print res.status, res.reason
+	print "\napps_count\t","GET\t",umeng_api_url['host']+url,"\n",res.status, res.reason
 
 	#如果数据返回出错，那么return 空
 	if res.status != 200:
@@ -132,7 +132,7 @@ def apps_list(auth_token,apps_count,page=1,per_page=20):
 	conn.request("GET", url)
 
 	res = conn.getresponse()
-	print res.status, res.reason
+	print "\napps_list\t","GET\t",umeng_api_url['host']+url,"\n",res.status, res.reason
 
 	#如果数据返回出错，那么return 空
 	if res.status != 200:
@@ -170,7 +170,7 @@ def app_new_users(auth_token,appkey,start_date=time.strftime('%Y-%m-01',time.loc
 	conn.request("GET", url)
 
 	res = conn.getresponse()
-	print res.status, res.reason
+	print "\napp_new_users\t","GET\t",umeng_api_url['host']+url,"\n",res.status, res.reason
 
 	#如果数据返回出错，那么return 空
 	if res.status != 200:
@@ -192,5 +192,5 @@ def app_new_users(auth_token,appkey,start_date=time.strftime('%Y-%m-01',time.loc
 			the_new_user[x_date] = newed_user_array['data']['all'][x_date_index]
 			x_date_index = x_date_index+1
 
-	print appkey,the_new_user
+	# print appkey,the_new_user
 	return the_new_user
