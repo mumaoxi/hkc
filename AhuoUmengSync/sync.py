@@ -18,7 +18,7 @@ if sys.getdefaultencoding() != default_encoding:
 sync_api_url = {'host':'10.0.1.122:3000' if 'Darwin' in platform.platform() else '10.122.73.115:8080','sync':'/api/v1/platform_statistics'}
 
 #此次同步的渠道名称
-sync_channel_name = "广点通"
+sync_channel_name = "广点通_友盟"
 
 """
 只保留数字
