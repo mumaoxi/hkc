@@ -88,7 +88,7 @@ def get_all_aihuoapp_new_users_data(auth_token,apps_list,start_date=time.strftim
 
 				#只同步今天或者昨天的数据
 				if data_date == date_today or data_date == date_yestday:
-					sync_data_to_server(app['aihuo_adv_id'],str(int(the_new_users[key])+8000),key)
+					sync_data_to_server(app['aihuo_adv_id'],str(int(the_new_users[key])),key)
 
 
 #登录
