@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HkcAndroidExtra</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hkc_app_name">@string/hello_world</string>
+    <string name="hello_world">你好世界</string>
     <string name="title_activity_target">TargetActivity</string>
     <string name="title_activity_hkcuninstall_moniter">应用自己被卸载</string>
 

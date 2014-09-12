@@ -36,7 +36,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/hkc_ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/hkc_app_name"
         android:theme="@style/AppTheme" >
 
         <!-- HKC渠道 -->
