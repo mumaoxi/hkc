@@ -5,6 +5,7 @@ import os
 import sys
 import umeng
 import time
+import datetime
 import httplib
 import urllib
 import platform
@@ -73,7 +74,7 @@ def sync_data_to_server(adv_content_id,install_count,report_date):
 """
 根据应用列表，获取每个应用的新增活跃用户
 """
-def get_all_aihuoapp_new_users_data(auth_token,apps_list,start_date=time.strftime('%Y-%m-01',time.localtime(time.time())),end_date=time.strftime('%Y-%m-%d',time.localtime(time.time()))):
+def get_all_aihuoapp_new_users_data(auth_token,apps_list,start_date=datetime.date(datetime.date.today().year,datetime.date.today().month,1)-datetime.timedelta(1),end_date=time.strftime('%Y-%m-%d',time.localtime(time.time()))):
 	for app in apps_list:
 		if app['aihuo_adv_id'] > 0:
 			the_new_users = umeng.app_new_users(auth_token,app['appkey'],start_date,end_date)
